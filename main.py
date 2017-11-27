@@ -9,6 +9,7 @@ Main function for testing
 
 # homegrown libraries
 from methods import import_data
+from methods import overview_data
 
 
 # main function
@@ -17,7 +18,9 @@ def main():
 
     data_fname = 'pMHC-TCR-structures.csv'
 
-    import_data.import_data(data_fname)
+    data = import_data.import_data(data_fname)
+    #overview_data.chain_length_frequency(data)
+    overview_data.alignment(data)
 
 
 

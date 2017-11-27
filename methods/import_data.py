@@ -83,14 +83,8 @@ def _load_pdb_file(pdb_name):
 def import_data(fname):
     pdb_names = _read_files(fname)
     pdb_files = _load_pdb_files(pdb_names)
-
-    pdbp = PDBParser()
-    ppb = PPBuilder()
+    return pdb_files
     
-    structure = pdbp.get_structure('test','structures/'+pdb_files.keys()[0]+'.pdb')
-    for pp in ppb.build_peptides(structure):
-        print 'Next'
-        print pp.get_sequence()
 
     #print val
     #print dir(val)
